@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анастасия Раздобреева](https://up.htmlacademy.ru/adaptive/12/user/200637).
-* Наставник: `Неизвестно`.
+* Наставник: [Анатолий Вершинин](https://htmlacademy.ru/profile/id81582).
 
 ---
 
