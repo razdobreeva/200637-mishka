@@ -9,7 +9,7 @@
     <header class="page-header">
       <nav class="main-nav">
         <a class="main-nav__logo" href="index.html">
-          <img class="main-nav__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt=Логотип "Mishka">
+          <img class="main-nav__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип Mishka">
         </a>
 
         <button class="main-nav__toggle" type="button">
@@ -70,5 +70,35 @@
         </a>
       </div>
     </footer>
+
+    <div class="modal-add">
+      <button class="modal-add__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <h2 class="h2-title">Добавить в корзину</h2>
+
+      <form class="modal-add__form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="modal-add__fieldset">
+          <legend class="modal-add__legend">
+            Выберите размер:
+          </legend>
+          <ul class="modal-add__list">
+            <li class="modal-add__item">
+              <input class="modal-add__size-button button" type="radio" id="s-size" name="size" value="S" checked>
+              <label class="visually-hidden" for="s-size">S</label>
+            </li>
+            <li class="modal-add__item">
+              <input class="modal-add__size-button button" type="radio" id="m-size" name="size" value="M">
+              <label class="visually-hidden" for="m-size">M</label>
+            </li>
+            <li class="modal-add__item">
+              <input class="modal-add__size-button button" type="radio" id="l-size" name="size" value="L">
+              <label class="visually-hidden" for="l-size">L</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="modal-add__button button" type="submit">Добавить</button>
+      </form>
+    </div>
   </body>
 </html>
