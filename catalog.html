@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="page">
     <header class="page-header">
-      <nav class="main-nav">
-        <a class="main-nav__logo" href="index.html">
-          <img class="main-nav__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип Mishka">
-        </a>
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип Mishka">
+      </a>
 
+      <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -40,10 +41,10 @@
     </header>
 
     <main class="page__main main">
-      <h1 class="h1-title">Каталог товаров</h1>
+      <h1 class="main__title">Каталог товаров</h1>
 
       <section class="catalog">
-        <h2 class="visually-hidden">Каталог товаров</h2>
+        <h2 class="catalog__title visually-hidden">Каталог товаров</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
             <article class="catalog__article">
@@ -52,7 +53,7 @@
               </a>
               <div class="catalog__description">
                 <a class="catalog__name" href="#">
-                  <h3 class="h3-title">Зайчик-попрыгайчик</h3>
+                  <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
                 </a>
                 <span class="catalog__parameters">
                   Рост 30 см, вес 200 г
@@ -73,7 +74,7 @@
               </a>
               <div class="catalog__description">
                 <a class="catalog__name" href="#">
-                  <h3 class="h3-title">Корзинка для белья</h3>
+                  <h3 class="catalog__item-title">Корзинка для белья</h3>
                 </a>
                 <span class="catalog__parameters">
                   Диаметр 15 см, высота 10 см
@@ -94,7 +95,7 @@
               </a>
               <div class="catalog__description">
                 <a class="catalog__name" href="#">
-                  <h3 class="h3-title">Большая корзинка для игрушек</h3>
+                  <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
                 </a>
                 <span class="catalog__parameters">
                   Диаметр 30 см, высота 30 см
@@ -111,15 +112,15 @@
         </ul>
       </section>
 
-      <section class="manufacturing-process">
-        <h3 class="h3-title">Процесс производства</h3>
-        <p class="manufacturing-process__comment">
+      <section class="manufacture">
+        <h3 class="manufacture__title">Процесс производства</h3>
+        <p class="manufacture__comment">
           По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
         </p>
-        <div class="manufacturing-process__video">
+        <div class="manufacture__video">
           <img src="http://placehold.it/260x150" width="260" height="150" alt="Процесс производства">
         </div>
-        <a class="manufacturing-process__button button" href="order.html">Сделать заказ</a>
+        <a class="manufacture__button button" href="order.html">Сделать заказ</a>
       </section>
     </main>
 
@@ -153,33 +154,33 @@
       </div>
     </footer>
 
-    <div class="modal-add">
-      <button class="modal-add__close" type="button">
+    <div class="modal">
+      <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
-      <h2 class="h2-title">Добавить в корзину</h2>
+      <h2 class="modal__title">Добавить в корзину</h2>
 
-      <form class="modal-add__form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="modal-add__fieldset">
-          <legend class="modal-add__legend">
+      <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="modal__fieldset">
+          <legend class="modal__legend">
             Выберите размер:
           </legend>
-          <ul class="modal-add__list">
-            <li class="modal-add__item">
-              <input class="modal-add__size-button button" type="radio" id="s-size" name="size" value="S" checked>
+          <ul class="modal__list">
+            <li class="modal__item">
+              <input class="modal__size-button button" type="radio" id="s-size" name="size" checked>
               <label class="visually-hidden" for="s-size">S</label>
             </li>
-            <li class="modal-add__item">
-              <input class="modal-add__size-button button" type="radio" id="m-size" name="size" value="M">
+            <li class="modal__item">
+              <input class="modal__size-button button" type="radio" id="m-size" name="size">
               <label class="visually-hidden" for="m-size">M</label>
             </li>
-            <li class="modal-add__item">
-              <input class="modal-add__size-button button" type="radio" id="l-size" name="size" value="L">
+            <li class="modal__item">
+              <input class="modal__size-button button" type="radio" id="l-size" name="size">
               <label class="visually-hidden" for="l-size">L</label>
             </li>
           </ul>
         </fieldset>
-        <button class="modal-add__button button" type="submit">Добавить</button>
+        <button class="modal__button button" type="submit">Добавить</button>
       </form>
     </div>
   </body>

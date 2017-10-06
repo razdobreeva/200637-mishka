@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="page">
     <header class="page__header header">
-      <nav class="main-nav">
-        <a class="main-nav__logo" href="index.html">
-          <img class="main-nav__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип Mishka">
-        </a>
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип Mishka">
+      </a>
 
+      <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -40,9 +41,10 @@
     </header>
 
     <main class="page__main main">
-      <h1 class="h1-title">Вязание на заказ</h1>
+      <h1 class="main__title">Вязание на заказ</h1>
+
       <section class="order">
-        <h2 class="visually-hidden">Оформление заказа</h2>
+        <h2 class="order__title visually-hidden">Оформление заказа</h2>
         <p class="order__description">
           Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
         </p>
@@ -52,11 +54,11 @@
             <legend class="order__legend">Тип</legend>
             <ul class="order__list">
               <li class="order__item">
-                <input class="order__input order__input--radio" type="radio" id="accesory" name="type" value="accesory" checked>
+                <input class="order__input order__input--radio" type="radio" id="accesory" name="type" checked>
                 <label class="order__label" for="accesory">Аксессуар для интерьера</label>
               </li>
               <li class="order__item">
-                <input class="order__input order__input--radio" type="radio" id="toy" name="type" value="toy">
+                <input class="order__input order__input--radio" type="radio" id="toy" name="type">
                 <label class="order__label" for="toy">Детская игрушка</label>
               </li>
             </ul>
