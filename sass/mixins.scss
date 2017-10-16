@@ -3,3 +3,25 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin link-decoration($opacity-hover: 0.6, $opacity-active: 0.3, $color: $title-color) {
+  &:hover,
+  &:focus {
+    color: $color;
+    opacity: $opacity-hover;
+  }
+
+  &:focus {
+    opacity: $opacity-active;
+  }
+}
+
+@mixin text-parameters($font-size, $font-weight, $line-height, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $color;
+  font-style: normal;
+}

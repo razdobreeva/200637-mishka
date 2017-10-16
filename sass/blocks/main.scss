@@ -6,5 +6,16 @@
 }
 
 .main__background--inner {
-  background-color: $background-color;
+  background-color: $bg-lightgrey;
+}
+
+.main__title {
+  @include text-parameters(27px, 700, 30px, $title-color);
+  /*font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $title-color;
+  font-style: normal;*/
 }
