@@ -1,0 +1,31 @@
+.modal__title {
+  @include text-parameters($title-size, 700, 30px, $title-color);
+  text-transform: uppercase;
+  /*font-size: $title-size;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $title-color;
+  font-style: normal;*/
+}
+
+.modal__fieldset {
+  border: none;
+}
+
+.modal__legend {
+  @include text-parameters($text-size, 400, 30px, $text-color);
+  /*font-size: $text-size;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $text-color;
+  font-style: normal;*/
+}
+
+.modal__list {
+  @include list-decoration;
+}

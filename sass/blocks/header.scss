@@ -1,0 +1,31 @@
+.header__logo {
+  @include link-decoration();
+}
+
+.main-nav__list {
+  @include list-decoration;
+}
+
+.site-list__link {
+  @include text-parameters(17px, 700, 24px, $title-color);
+  /*font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $title-color;
+  font-style: normal;*/
+  @include link-decoration();
+}
+
+.user-list__link {
+  @include text-parameters(17px, 700, 24px, $title-color);
+  /*font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $title-color;
+  font-style: normal;*/
+  @include link-decoration();
+}

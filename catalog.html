@@ -3,56 +3,63 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="page">
-    <header class="page-header">
-      <nav class="main-nav">
-        <a class="main-nav__logo" href="index.html">
-          <img class="main-nav__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип Mishka">
-        </a>
+    <header class="page__header header">
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
+      </a>
 
+      <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
 
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <form class="user-list__search" method="post" action="https://echo.htmlacademy.ru">
+            <!--<form class="user-list__search" method="post" action="https://echo.htmlacademy.ru">
               <label class="visually-hidden" for="search">Поиск по сайту</label>
               <input class="user-list__input" type="search" id="search" name="search" placeholder="Поиск по сайту">
-            </form>
+            </form>-->
+            <a class="user-list__link" href="#">
+              <span class="user-list__search">Поиск по сайту</span>
+            </a>
           </li>
           <li class="user-list__item">
-            <a href="#">Корзина: пока пуста</a>
+            <a class="user-list__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page__main main">
-      <h1 class="h1-title">Каталог товаров</h1>
+      <div class="main__background main__background--inner">
+        <h1 class="main__title">Каталог товаров</h1>
+      </div>
 
       <section class="catalog">
-        <h2 class="visually-hidden">Каталог товаров</h2>
+        <h2 class="catalog__title visually-hidden">Каталог товаров</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
             <article class="catalog__article">
               <a class="catalog__image" href="#">
-                <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
+                <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
               </a>
               <div class="catalog__description">
                 <a class="catalog__name" href="#">
-                  <h3 class="h3-title">Зайчик-попрыгайчик</h3>
+                  <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
                 </a>
                 <span class="catalog__parameters">
                   Рост 30 см, вес 200 г
@@ -69,11 +76,11 @@
           <li class="catalog__item">
             <article class="catalog__article">
               <a class="catalog__image" href="#">
-                <img src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
+                <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
               </a>
               <div class="catalog__description">
                 <a class="catalog__name" href="#">
-                  <h3 class="h3-title">Корзинка для белья</h3>
+                  <h3 class="catalog__item-title">Корзинка для белья</h3>
                 </a>
                 <span class="catalog__parameters">
                   Диаметр 15 см, высота 10 см
@@ -90,11 +97,11 @@
           <li class="catalog__item">
             <article class="catalog__article">
               <a class="catalog__image" href="#">
-                <img src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек">
+                <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
               </a>
               <div class="catalog__description">
                 <a class="catalog__name" href="#">
-                  <h3 class="h3-title">Большая корзинка для игрушек</h3>
+                  <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
                 </a>
                 <span class="catalog__parameters">
                   Диаметр 30 см, высота 30 см
@@ -111,21 +118,21 @@
         </ul>
       </section>
 
-      <section class="manufacturing-process">
-        <h3 class="h3-title">Процесс производства</h3>
-        <p class="manufacturing-process__comment">
+      <section class="manufacture">
+        <h3 class="manufacture__title">Процесс производства</h3>
+        <p class="manufacture__comment">
           По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
         </p>
-        <div class="manufacturing-process__video">
-          <img src="http://placehold.it/260x150" width="260" height="150" alt="Процесс производства">
+        <div class="manufacture__video">
+          <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Процесс производства">
         </div>
-        <a class="manufacturing-process__button button" href="order.html">Сделать заказ</a>
+        <a class="manufacture__button button" href="order.html">Сделать заказ</a>
       </section>
     </main>
 
     <footer class="page__footer footer">
       <section class="footer__social social">
-        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+        <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/mishka/">
@@ -138,7 +145,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/mishka/">
+            <a class="social__link social__link--twitter" href="https://www.twitter.com/mishka/">
               <span class="visually-hidden">Мы в Twitter</span>
             </a>
           </li>
@@ -146,40 +153,40 @@
       </section>
 
       <div class="footer__copyright">
-        <a href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
-          <img src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>
     </footer>
 
-    <div class="modal-add">
-      <button class="modal-add__close" type="button">
+    <div class="modal">
+      <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
-      <h2 class="h2-title">Добавить в корзину</h2>
+      <h2 class="modal__title">Добавить в корзину</h2>
 
-      <form class="modal-add__form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="modal-add__fieldset">
-          <legend class="modal-add__legend">
+      <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="modal__fieldset">
+          <legend class="modal__legend">
             Выберите размер:
           </legend>
-          <ul class="modal-add__list">
-            <li class="modal-add__item">
-              <input class="modal-add__size-button button" type="radio" id="s-size" name="size" value="S" checked>
+          <ul class="modal__list">
+            <li class="modal__item">
+              <input class="modal__size-button button" type="radio" id="s-size" name="size" checked>
               <label class="visually-hidden" for="s-size">S</label>
             </li>
-            <li class="modal-add__item">
-              <input class="modal-add__size-button button" type="radio" id="m-size" name="size" value="M">
+            <li class="modal__item">
+              <input class="modal__size-button button" type="radio" id="m-size" name="size">
               <label class="visually-hidden" for="m-size">M</label>
             </li>
-            <li class="modal-add__item">
-              <input class="modal-add__size-button button" type="radio" id="l-size" name="size" value="L">
+            <li class="modal__item">
+              <input class="modal__size-button button" type="radio" id="l-size" name="size">
               <label class="visually-hidden" for="l-size">L</label>
             </li>
           </ul>
         </fieldset>
-        <button class="modal-add__button button" type="submit">Добавить</button>
+        <button class="modal__button button" type="submit">Добавить</button>
       </form>
     </div>
   </body>

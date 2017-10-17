@@ -1,0 +1,14 @@
+.social__title {
+  @include text-parameters($title-size, 700, 30px, $title-color);
+  /*font-size: $title-size;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: $title-color;
+  font-style: normal;*/
+}
+
+.social__list {
+  @include list-decoration;
+}

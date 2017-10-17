@@ -3,59 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body class="page">
     <header class="page__header header">
-      <nav class="main-nav">
-        <a class="main-nav__logo">
-          <img class="main-nav__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип Mishka">
-        </a>
+      <a class="header__logo">
+        <img class="header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
+      </a>
 
+      <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
 
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="catalog.html">Каталог товаров</a>
+            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
+            <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
 
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
-            <form class="user-list__search" method="post" action="https://echo.htmlacademy.ru">
+            <!--<form class="user-list__search" method="post" action="https://echo.htmlacademy.ru">
               <label class="visually-hidden" for="search">Поиск по сайту</label>
               <input class="user-list__input" type="search" id="search" name="search" placeholder="Поиск по сайту">
-            </form>
+            </form>-->
+            <a class="user-list__link" href="#">
+              <span class="user-list__search">Поиск по сайту</span>
+            </a>
           </li>
           <li class="user-list__item">
-            <a href="#">Корзина: пока пуста</a>
+            <a class="user-list__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <main class="page__main main">
-      <h1 class="h1-title">Милые штуки ручной работы для дома</h1>
+      <div class="main__background main__background--index">
+        <h1 class="main__title">Милые штуки ручной работы для дома</h1>
+      </div>
 
       <section class="products">
-        <h2 class="visually-hidden">Типы товаров</h2>
+        <h2 class="products__title visually-hidden">Типы товаров</h2>
         <ul class="products__list">
           <li class="products__item">
-            <a class="products__link" href="#">Предметы интерьера</a>
+            <a class="products__link products__link--interior" href="#">Предметы интерьера</a>
           </li>
           <li class="products__item">
-            <a class="products__link" href="#">Детские игрушки</a>
+            <a class="products__link products__link--toys" href="#">Детские игрушки</a>
           </li>
         </ul>
       </section>
 
       <article class="bestseller">
-        <h2 class="h2-title">Вязаные корзинки</h2>
+        <h2 class="bestseller__title">Вязаные корзинки</h2>
         <span class="bestseller__label">Товар недели</span>
 
         <div class="bestseller__description">
@@ -63,22 +70,22 @@
 
           <table class="bestseller__parameters">
             <tr>
-              <th class="bestseller__parameter">Цвет:</th>
+              <td class="bestseller__parameter">Цвет:</td>
               <td class="bestseller__value">«Тиффани»/серый</td>
             </tr>
             <tr>
-              <th class="bestseller__parameter">Диаметр:</th>
+              <td class="bestseller__parameter">Диаметр:</td>
               <td class="bestseller__value">25 см</td>
             </tr>
             <tr>
-              <th class="bestseller__parameter">Высота:</th>
+              <td class="bestseller__parameter">Высота:</td>
               <td class="bestseller__value">15 см</td>
             </tr>
           </table>
         </div>
 
         <div class="bestseller__image">
-          <img src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
+          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         </div>
 
         <div class="bestseller__buy">
@@ -88,7 +95,7 @@
       </article>
 
       <section class="advantages">
-        <h2 class="h2-title">Коротко о нас:</h2>
+        <h2 class="advantages__title">Коротко о нас:</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--ecofriendly">
             Экологически чистые материалы
@@ -105,14 +112,14 @@
           <li class="advantages__item advantages__item--patriotic">
             Поддержка отечественного производителя
           </li>
-          <li class="advantages__item advantages__item--gift-wrapped">
+          <li class="advantages__item advantages__item--giftwrapped">
             Поставляется в подарочной упаковке
           </li>
         </ul>
       </section>
 
       <article class="reviews">
-        <h2 class="h2-title">Отзывы</h2>
+        <h2 class="reviews__title">Отзывы</h2>
         <blockquote class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
         <div class="reviews__author">
           <span class="rewiews__name">Анастасия Красильникова</span>
@@ -130,31 +137,28 @@
       </article>
 
       <section class="contacts">
-        <h3 class="h3-title">Контакты</h3>
-
-        <dl class="contacts__list">
-          <dt class="contacts__type">e-mail:</dt>
-          <dd class="contacts__value">
-            <a class="contacts__mail" href="mailto:info@mimimishkashop.ru">
-              info@mimimishkashop.ru
-            </a>
-          </dd>
-          <dt class="contacts__type">адрес:</dt>
-          <dd class="contacts__value">
-            г. Санкт-Петербург, ул. Большая Конюшенная,  д. 19/8, офис 101
-          </dd>
-        </dl>
+        <h3 class="contacts__title">Контакты</h3>
+        <div class="contacts__item">
+          e-mail:
+          <a class="contacts__mail" href="mailto:info@mimimishkashop.ru">
+            info@mimimishkashop.ru
+          </a>
+        </div>
+        <div class="contacts__item">
+          адрес:
+          <span class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная,  д. 19/8, офис 101</span>
+        </div>
 
         <a class="contacts__map" href="#">
-          <img src="http://placehold.it/320x457" width="320" height="457" alt="Офис компании находится по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          <img src="img/map-mobile@1x.jpg" width="322" height="457" alt="Офис компании находится по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </a>
-        <a class="contacts_button button" href="write-us.html">Напишите нам</a>
+        <a class="contacts_button button" href="write.html">Напишите нам</a>
       </section>
     </main>
 
     <footer class="page__footer footer">
       <section class="footer__social social">
-        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+        <h2 class="social__title visually-hidden">Мы в социальных сетях</h2>
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.instagram.com/mishka/">
@@ -167,7 +171,7 @@
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://twitter.com/mishka/">
+            <a class="social__link social__link--twitter" href="https://www.twitter.com/mishka/">
               <span class="visually-hidden">Мы в Twitter</span>
             </a>
           </li>
@@ -175,40 +179,40 @@
       </section>
 
       <div class="footer__copyright">
-        <a href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive">
           Разработано
-          <img src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>
     </footer>
 
-    <div class="modal-add">
-      <button class="modal-add__close" type="button">
+    <div class="modal">
+      <button class="modal__close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
-      <h2 class="h2-title">Добавить в корзину</h2>
+      <h2 class="modal__title">Добавить в корзину</h2>
 
-      <form class="modal-add__form" method="get" action="https://echo.htmlacademy.ru">
-        <fieldset class="modal-add__fieldset">
-          <legend class="modal-add__legend">
+      <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="modal__fieldset">
+          <legend class="modal__legend">
             Выберите размер:
           </legend>
-          <ul class="modal-add__list">
-            <li class="modal-add__item">
-              <input class="modal-add__size-button button" type="radio" id="s-size" name="size" value="S" checked>
+          <ul class="modal__list">
+            <li class="modal__item">
+              <input class="modal__size-button button" type="radio" id="s-size" name="size" checked>
               <label class="visually-hidden" for="s-size">S</label>
             </li>
-            <li class="modal-add__item">
-              <input class="modal-add__size-button button" type="radio" id="m-size" name="size" value="M">
+            <li class="modal__item">
+              <input class="modal__size-button button" type="radio" id="m-size" name="size">
               <label class="visually-hidden" for="m-size">M</label>
             </li>
-            <li class="modal-add__item">
-              <input class="modal-add__size-button button" type="radio" id="l-size" name="size" value="L">
+            <li class="modal__item">
+              <input class="modal__size-button button" type="radio" id="l-size" name="size">
               <label class="visually-hidden" for="l-size">L</label>
             </li>
           </ul>
         </fieldset>
-        <button class="modal-add__button button" type="submit">Добавить</button>
+        <button class="modal__button button" type="submit">Добавить</button>
       </form>
     </div>
 

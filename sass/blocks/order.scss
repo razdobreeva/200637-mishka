@@ -1,0 +1,31 @@
+.order__title {
+  @include text-parameters($title-size, 700, 30px, $title-color);
+}
+
+.order__description {
+  margin: 0;
+  padding: 0;
+
+  @include text-parameters(13px, 400, 24px, $text-color);
+}
+
+.order__fieldset {
+  border: none;
+}
+
+.order__legend {
+  @include text-parameters(17px, 700, 17px, $tiffany);
+  text-transform: uppercase;
+}
+
+.order__list {
+  @include list-decoration;
+}
+
+.order__label {
+  @include text-parameters(17px, 700, 18px, $title-color);
+}
+
+.order__comment {
+  @include text-parameters(14px, 400, 16px, $text-color);
+}

@@ -1,0 +1,10 @@
+.manufacture__title {
+  @include text-parameters(17px, 700, 24px, $title-color);
+}
+
+.manufacture__comment {
+  margin: 0;
+  padding: 0;
+
+  @include text-parameters(13px, 400, 24px, $text-color);
+}

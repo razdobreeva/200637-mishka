@@ -1,0 +1,19 @@
+.catalog__title {
+  @include text-parameters($title-size, 700, 30px, $title-color);
+}
+
+.catalog__list {
+  @include list-decoration;
+}
+
+.catalog__name {
+  @include text-parameters(17px, 700, 24px, $title-color);
+}
+
+.catalog__parameters {
+  @include text-parameters(13px, 400, 30px, $text-color);
+}
+
+.catalog__price {
+  @include text-parameters($text-size, 700, 24px, $title-color);
+}

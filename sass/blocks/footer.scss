@@ -1,0 +1,11 @@
+.footer {
+  background-color: $bg-lightgrey;
+}
+
+/*.footer__copyright {
+}*/
+
+.footer__link {
+  @include text-parameters(19px, 700, 19px, $title-color);
+  @include link-decoration(1);
+}
