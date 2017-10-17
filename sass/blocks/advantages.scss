@@ -1,12 +1,5 @@
 .advantages__title {
   @include text-parameters($title-size, 700, 30px, $title-color);
-  /*font-size: $title-size;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: $title-color;
-  font-style: normal;*/
 }
 
 .advantages__list {
@@ -15,11 +8,4 @@
 
 .advantages__item {
   @include text-parameters(17px, 700, 20px, $title-color);
-  /*font-size: 17px;
-  font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: $title-color;
-  font-style: normal;*/
 }
