@@ -11,7 +11,7 @@
     opacity: $opacity-hover;
   }
 
-  &:focus {
+  &:active {
     opacity: $opacity-active;
   }
 }

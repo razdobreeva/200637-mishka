@@ -1,0 +1,26 @@
+.button {
+  display: block;
+  padding: 14px 0;
+
+  @include text-parameters(17px, 700, 20px, $text-color);
+
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word;
+
+  background-color: #ffffff;
+
+  border: solid 2px $text-color;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: $text-color;
+  }
+
+  &:active {
+    color: #8d8d8d;
+    background-color: $text-color;
+  }
+}
