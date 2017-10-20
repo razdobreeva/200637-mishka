@@ -1,31 +1,67 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .header__logo {
+  position: relative;
+  padding-top: 22px;
+  padding-bottom: 14px;
+  text-align: center;
+
   @include link-decoration();
+
+  border-bottom: solid 1px #ececec;
 }
 
-.main-nav__list {
-  @include list-decoration;
+.header__delivery {
+  display: none;
 }
 
-.site-list__link {
-  @include text-parameters(17px, 700, 24px, $title-color);
-  /*font-size: 17px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: $title-color;
-  font-style: normal;*/
-  @include link-decoration();
+@media (min-width: $tablet-width) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header__logo {
+    padding-left: 50px;
+    padding-top: 25px;
+    padding-bottom: 19px;
+    text-align: left;
+    flex-grow: 1;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__delivery {
+    display: block;
+    order: 3;
+    flex-grow: 1;
+    text-align: right;
+
+    padding-top: 25px;
+    padding-right: 50px;
+    padding-bottom: 27px;
+
+    @include text-parameters($text-size, 400, 24px, $text-color);
+  }
 }
 
-.user-list__link {
-  @include text-parameters(17px, 700, 24px, $title-color);
-  /*font-size: 17px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: $title-color;
-  font-style: normal;*/
-  @include link-decoration();
+
+@media (min-width: $desktop-width) {
+  .header__logo {
+    order: 2;
+    flex-grow: 1;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /*.header__delivery {
+    background-color: transparent;
+  }*/
 }

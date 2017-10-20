@@ -1,0 +1,30 @@
+.products-nav {
+  display: none;
+}
+
+.products-nav__list {
+  @include list-decoration;
+  padding-left: 14px;
+}
+
+.products-nav__link {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 34px;
+  padding-left: 36px;
+
+  @include text-parameters($text-size, 700, 24px, $title-color);
+  @include link-decoration();
+}
+
+@media (min-width: $desktop-width) {
+  .products-nav {
+    display: block;
+    order: 3;
+  }
+
+  .products-nav__list {
+    display: flex;
+    flex-direction: row;
+  }
+}
