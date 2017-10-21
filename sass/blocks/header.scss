@@ -28,7 +28,6 @@
   .header__logo {
     padding-left: 50px;
     padding-top: 25px;
-    padding-bottom: 19px;
     text-align: left;
     flex-grow: 1;
   }
@@ -43,9 +42,9 @@
     flex-grow: 1;
     text-align: right;
 
-    padding-top: 25px;
+    padding-top: 17px;
     padding-right: 50px;
-    padding-bottom: 27px;
+    padding-bottom: 0;
 
     @include text-parameters($text-size, 400, 24px, $text-color);
   }
@@ -60,8 +59,4 @@
     padding-left: 30px;
     padding-right: 30px;
   }
-
-  /*.header__delivery {
-    background-color: transparent;
-  }*/
 }

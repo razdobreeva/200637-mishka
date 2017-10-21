@@ -25,12 +25,14 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    padding-left: 14px;
+    padding-left: 50px;
   }
 
   .main-nav__link {
-    padding-top: 25px;
-    padding-left: 36px;
+    padding-top: 17px;
+    padding-right: 37px;
+    padding-bottom: 0;
+    padding-left: 0;
     border-bottom: none;
 
     @include text-parameters($text-size, 700, 24px, $title-color);
@@ -47,18 +49,24 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    width: 400px;
+    width: 420px;
 
     border-bottom: solid 1px #ececec;
   }
 
   .main-nav__item {
-    flex-shrink: 0;
+    &:first-of-type {
+      border-right: solid 1px #ececec;
+    }
+
+    &:nth-of-type(2) {
+      padding-left: 35px;
+    }
   }
 
   .main-nav__link {
-    padding-top: 33px;
-    padding-bottom: 35px;
+    padding-top: 30px;
+    padding-bottom: 34px;
 
     @include text-parameters(17px, 700, 24px, $title-color);
   }
