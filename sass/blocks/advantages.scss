@@ -1,3 +1,11 @@
+.advantages {
+  margin: 0 auto;
+  margin-top: 33px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 260px;
+}
+
 .advantages__title {
   @include text-parameters($title-size, 700, 30px, $title-color);
 }

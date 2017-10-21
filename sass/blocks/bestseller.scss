@@ -1,56 +1,182 @@
+.bestseller {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0 auto;
+  margin-top: 28px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 35px;
+  width: 260px;
+}
+
+.bestseller__headline {
+  display: flex;
+  flex-direction: column;
+}
+
 .bestseller__title {
+  margin: 0;
+  padding-bottom: 3px;
+
   @include text-parameters($title-size, 700, 30px, $title-color);
-  /*font-size: $title-size;
-  font-weight: 700;
-  line-height: 30px;
-  letter-spacing: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: $title-color;
-  font-style: normal;*/
 }
 
 .bestseller__label {
   @include text-parameters(17px, 700, 20px, $tiffany);
   text-transform: uppercase;
-  /*font-size: 17px;
-  font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: $tiffany;
-  font-style: normal;*/
+}
+
+.bestseller__description {
+  padding: 20px 0;
 }
 
 .bestseller__paragraph {
+  margin: 0;
+  padding: 0;
+
   @include text-parameters($text-size, 400, 24px, $text-color);
-  /*font-size: $text-size;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: $text-color;
-  font-style: normal;*/
 }
 
 .bestseller__parameters {
+  padding-top: 20px;
+  padding-bottom: 8px;
+  width: 100%;
+
   @include text-parameters($text-size, 400, 20px, $text-color);
-  /*font-size: $text-size;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: $text-color;
-  font-style: normal;*/
+}
+
+.bestseller__parameters td {
+  padding: 9px 0;
+}
+
+.bestseller__parameter,
+.bestseller__value {
+  border-bottom: solid 1px #ececec;
+}
+
+.bestseller__parameter {
+  width: 98px;
+}
+
+.bestseller__buy {
+  margin-top: 19px;
 }
 
 .bestseller__price {
+  display: block;
+  text-align: center;
+  margin-bottom: 26px;
+
   @include text-parameters(17px, 700, 24px, $text-color);
-  /*font-size: 17px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0;
-  font-family: "Open Sans", "Arial", sans-serif;
-  color: $text-color;
-  font-style: normal;*/
+}
+
+@media (min-width: $tablet-width) {
+  .bestseller {
+    position: relative;
+
+    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 52px;
+    width: $tablet-width - 100px;
+  }
+
+  .bestseller__headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .bestseller__title {
+    margin: 0;
+    padding-bottom: 3px;
+
+    @include text-parameters(43px, 700, 50px, $title-color);
+  }
+
+  .bestseller__label {
+    width: 100px;
+    padding-top: 10px;
+
+    @include text-parameters(17px, 700, 17px, $tiffany);
+    text-transform: uppercase;
+  }
+
+  .bestseller__image {
+    position: absolute;
+    right: 50px;
+    top: 107px;
+  }
+
+  .bestseller__description {
+    margin-top: 25px;
+    padding: 20px 0;
+    width: 290px;
+  }
+
+  .bestseller__paragraph {
+    margin-bottom: 15px;
+
+    @include text-parameters(17px, 400, 30px, $text-color);
+  }
+
+  .bestseller__buy {
+    margin-top: 26px;
+    width: 290px;
+  }
+
+  .bestseller__price {
+    display: block;
+    text-align: center;
+    padding-bottom: 9px;
+
+    @include text-parameters(20px, 700, 24px, $text-color);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .bestseller {
+    padding-bottom: 73px;
+    width: $desktop-width - 100px;
+  }
+
+  .bestseller__headline {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: 84px;
+  }
+
+  .bestseller__title {
+    margin: 0;
+    padding-bottom: 3px;
+
+    @include text-parameters(53px, 700, 57px, $title-color);
+  }
+
+  .bestseller__label {
+    width: 115px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    @include text-parameters(17px, 700, 17px, $tiffany);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .bestseller__image {
+    position: absolute;
+    right: 50px;
+    top: 23px;
+  }
+
+  .bestseller__description {
+    margin-left: 175px;
+  }
+
+  .bestseller__buy {
+    margin-left: 175px;
+  }
 }
