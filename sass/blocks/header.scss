@@ -19,6 +19,10 @@
   display: none;
 }
 
+.header__toggle {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .header {
     display: flex;
