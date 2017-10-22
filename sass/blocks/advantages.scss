@@ -7,13 +7,159 @@
 }
 
 .advantages__title {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 36px;
+
   @include text-parameters($title-size, 700, 30px, $title-color);
 }
 
 .advantages__list {
+  display: flex;
+  flex-direction: column;
+
   @include list-decoration;
 }
 
 .advantages__item {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 33px;
+
   @include text-parameters(17px, 700, 20px, $title-color);
+
+  &::before {
+    content: "";
+    position: absolute;
+  }
+
+  &--flower::before {
+    top: 0;
+    width: 33px;
+    height: 38px;
+    background-color: #ffffff;
+    background-image: url("../../img/icon-feature-flower.svg");
+  }
+
+  &--money::before {
+    top: 0;
+    width: 47px;
+    height: 27px;
+    background-color: #ffffff;
+    background-image: url("../../img/icon-feature-money.svg");
+  }
+
+  &--heart::before {
+    top: 0;
+    width: 34px;
+    height: 27px;
+    background-color: #ffffff;
+    background-image: url("../../img/icon-feature-heart.svg");
+  }
+
+  &--ball::before {
+    top: 0;
+    width: 35px;
+    height: 34px;
+    background-color: #ffffff;
+    background-image: url("../../img/icon-feature-ball.svg");
+  }
+
+  &--rocket::before {
+    top: 0;
+    width: 55px;
+    height: 23px;
+    background-color: #ffffff;
+    background-image: url("../../img/icon-feature-rocket.svg");
+  }
+
+  &--gift::before {
+    top: 0;
+    width: 33px;
+    height: 32px;
+    background-color: #ffffff;
+    background-image: url("../../img/icon-feature-gift.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    margin-top: 57px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: $tablet-width - 100px;
+  }
+
+  .advantages__title {
+    padding-bottom: 56px;
+
+    @include text-parameters(43px, 700, 50px, $title-color);
+  }
+
+  .advantages__list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    padding-right: 35px;
+    width: 295px;
+
+    @include text-parameters(20px, 700, 22px, $title-color);
+
+    &--money {
+      order: 3;
+    }
+
+    &--heart {
+      order: 5;
+    }
+
+    &--ball {
+      order: 2;
+    }
+
+    &--rocket {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    margin-top: 68px;
+    padding-left: 50px + 175px;
+    padding-right: 50px + 175px;
+    width: $desktop-width - 100px - 350px;
+  }
+
+  .advantages__title {
+    padding-bottom: 56px;
+
+    @include text-parameters(53px, 700, 57px, $title-color);
+  }
+
+  .advantages__list {
+    /*flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;*/
+  }
+
+  .advantages__item {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 60px;
+    padding-right: 55px;
+    width: 295px;
+
+    @include text-parameters(20px, 700, 22px, $title-color);
+  }
 }
