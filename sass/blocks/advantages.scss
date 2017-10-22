@@ -147,19 +147,10 @@
     @include text-parameters(53px, 700, 57px, $title-color);
   }
 
-  .advantages__list {
-    /*flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;*/
-  }
-
   .advantages__item {
-    position: relative;
     padding-top: 50px;
     padding-bottom: 60px;
     padding-right: 55px;
     width: 295px;
-
-    @include text-parameters(20px, 700, 22px, $title-color);
   }
 }
